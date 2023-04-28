@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+header {
+    background-color: black;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-menu li {
+    font-size: 18px;
+}
+
+/* Main */
+
+.flex-text {
+    display: flex;
+    gap: 40px;
+}
+
+/* Grids */
+
+.cards {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.cards-desafio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+
+/* Breakpoints */
+
+@media(max-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media(max-width: 992px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .cards-desafio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .flex-text {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 576px) {
+    .container {
+        padding: 0 5px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    .cards {
+        /*grid-template-columns: 1fr;*/
+        grid-template-columns: minmax(200px, 400px);
+        justify-content: center;
+        /*padding: 20px;*/
+    }
+
+    .cards-desafio {
+        margin: 50px 0;
+        grid-template-columns: 1fr;
+    }
+
+    /*.img {*/
+    /*    width: 100%;*/
+    /*}*/
+}
